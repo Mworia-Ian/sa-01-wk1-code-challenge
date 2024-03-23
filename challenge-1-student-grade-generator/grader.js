@@ -34,8 +34,10 @@ promptUser()
 */
  function gradeGenerator(score){
         let grade = ' '
-        if (score >= 79){
-            grade = 'A'
+        if  (score > 100 || score < 0) {
+                grade = 'Please enter a score btwn 0-100!!'
+        } else if(score >= 79) {
+                grade = 'A'
         }else if(score < 79 && score >= 60) {
             grade = 'B'
         }else if(score <= 59 && score > 49){
