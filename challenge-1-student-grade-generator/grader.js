@@ -62,3 +62,36 @@ promptUser()
         return `Your grade is: ${grade}`
  }
 
+
+
+// A different appraoch using the switch statement
+
+function grader(score){
+    grade = ''
+  
+    switch(true){
+      case (score > 100 || score < 0):
+        grade = 'Please enter a score btwn 0-100!!';
+        break;
+      case (score >= 79):
+        grade = 'A'
+        break
+      case (score < 79 && score >= 60):
+        grade = 'B'
+        break
+      case (score <= 59 && score > 49):
+        grade = 'C'
+        break
+      case (score <= 49 && score > 40):
+        grade = 'D'
+        break
+      default:
+        grade = 'E'
+        break
+    }
+    return grade
+      
+  }
+  
+  console.log(grader(39));
+  
